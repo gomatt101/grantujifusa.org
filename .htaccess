@@ -1,0 +1,20 @@
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 99.53.72.179
+
+# Start CloudFlare:grantujifusa.org rewrite. Do not Edit 
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^grantujifusa.org 
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L] 
+# End CloudFlare rewrite. 
+deny from 27.153.185.61
+deny from 222.77.233.209
+deny from 27.159.230.105
+deny from 110.86.186.223
+deny from 110.89.46.78
+deny from 117.26.193.242
+deny from 121.205.238.12
